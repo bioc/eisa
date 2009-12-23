@@ -1,0 +1,41 @@
+import(isa2)
+import(Category)
+import(AnnotationDbi)
+import(Biobase)
+
+export(ISA, ISANormalize, ISAIterate, ISAUnique, ISASweep,
+       ISASweepGraph, ISASweepGraphPlot, ISARobustness, ISAFilterRobust)
+
+export(ISAGO, ISAKEGG, ISACHR, ISAmiRNA)#, ISA.DBD)
+
+export(gograph, gographPlot, expPlotCreate, expPlotColbar,
+       expPlot, condPlot, overlap, overlapPlot, mnplot, ISAmnplot,
+       ISA2heatmap, profilePlot)
+       
+export(ISAHTMLTable, ISAHTMLModules, ISAHTML)
+
+exportMethods("featExprs", "sampExprs",
+              "prenormalized", "prenormalized<-",
+              "hasNA", "hasNA<-")
+
+S3method(print, ISAexpPlot)
+
+exportMethods("seedData", "runData",
+              "getFeatures", "getSamples",
+              "getFeatureNames", "getSampleNames",
+              "getFeatureMatrix", "getSampleMatrix",
+              "getFullFeatureMatrix", "getFullSampleMatrix",
+              "getFeatureScores", "getSampleScores",
+              "getNoFeatures", "getNoSamples",
+              "featureThreshold", "sampleThreshold",
+              "getOrganism")
+
+exportMethods("makeValidParams", "ontology", "ontology<-", "conditional",
+              "conditional<-", "drive", "drive<-", "hyperGTest")
+
+exportMethods("summary", "htmlReport", "pvalues", "geneCounts",
+              "oddsRatios", "expectedCounts", "universeCounts",
+              "universeMappedCount", "geneMappedCount", "geneIdUniverse",
+              "condGeneIdUniverse", "geneIdsByCategory", "sigCategories")
+
+exportMethods("coerce")
