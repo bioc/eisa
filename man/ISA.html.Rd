@@ -8,29 +8,30 @@
   ISA biclusters.
 }
 \usage{
-ISAHTMLTable (modules, target.dir, which = seq_len(length(modules)), 
+ISAHTMLTable (modules, target.dir, which = NULL,
     template = system.file("autogen", package = "eisa"), GO = NULL, 
     KEGG = NULL, miRNA = NULL, CHR = NULL, htmltitle = NULL, 
-    notes = NULL, seed = NULL) 
+    notes = NULL, seed = NULL, extra = list()) 
 
-ISAHTMLModules (eset, modules, which = seq_len(length(modules)), target.dir, 
+ISAHTMLModules (eset, modules, which = NULL, target.dir, 
     template = system.file("autogen", package = "eisa"), GO = NULL,    
     KEGG = NULL, miRNA = NULL, CHR = NULL, cond.to.include = NULL,     
     cond.col = "white", sep = NULL, seed = NULL, condPlot = TRUE)
 
 ISAHTML (eset, modules, target.dir, template = system.file("autogen", 
     package = "eisa"), GO, KEGG, miRNA = NULL, CHR = NULL, htmltitle = NULL, 
-    notes = NULL, seed = NULL, cond.to.include = NULL, cond.col = "white", 
-    sep = NULL, condPlot = TRUE)
+    notes = NULL, seed = NULL, table.extra = list(), cond.to.include = NULL, 
+    cond.col = "white", sep = NULL, condPlot = TRUE, which = NULL)
 }
 \arguments{
   \item{modules}{An \code{ISAModules} object.}
   \item{target.dir}{Character vector of length one, the directory in
     which the result is placed. It is created if it does not exist.}
   \item{which}{Numeric vector, which modules to include in the table
-    (for \code{ISAHTMLTable}); or, which modules to
-    create HTML pages for (\code{ISAHTMLModules}). All modules are
-    used by default.}
+    (\code{ISAHTMLTable}); or, which modules to
+    create HTML pages for (\code{ISAHTML} and \code{ISAHTMLModules}).
+    All modules are used if this argument is \code{NULL}, 
+    which is the default.}
   \item{template}{The directory containing the HTML template files. By
     default the template included in the \code{eisa} package is used.}
   \item{GO}{List of three \code{\link{GOListHyperGResult}} objects, as
@@ -48,6 +49,11 @@ ISAHTML (eset, modules, target.dir, template = system.file("autogen",
     table.}
   \item{seed}{Either \code{NULL}, or a character vector, with an optional
     column that is added to the module table.}
+  \item{extra}{Extra columns to put in the HTML table. It should be a
+    named list of character vectors, each with the same length as the
+    number of modules.}
+  \item{table.extra}{This is passed to \code{ISAHTMLTable} as the
+    \code{extra} argument.}
   \item{eset}{An \code{ExpressionSet} or \code{ISAExpressionSet}
     object. If an \code{ExpressionSet} object is supplied, then it is
     normalised by calling \code{\link{ISANormalize}} on it.}

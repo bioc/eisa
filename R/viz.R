@@ -519,6 +519,8 @@ condPlot <- function(modules, number, eset,
   }
   
   ylim <- range(to.plot)*1.4
+  if (ylim[1] > 0) ylim[1] <- 0
+  if (ylim[2] < 0) ylim[2] <- 0.2
   par(mar=c(1,3,1,2))
   barplot(to.plot, space=0, col=col, ylim=ylim, ...)
 
@@ -529,7 +531,7 @@ condPlot <- function(modules, number, eset,
   if (!is.null(sep)) {
 
     abline(v=sep, lty=2, col=sepcol)
-    text(sep, ylim[2], pos=2, names(sep), font=3, srt=90, cex=0.8)
+    text(sep, ylim[2], pos=2, names(sep), font=3, srt=90, cex=0.8, xpd=NA)
     points(to.plot, type="h")
     points(seq(along=to.plot)-1, to.plot, type="h")
   }
