@@ -1,5 +1,5 @@
 Package: eisa
-Version: 1.7.0
+Version: 1.7.1
 Date: Oct 18, 2011
 Title: Expression data analysis via the Iterative Signature Algorithm
 Author: Gabor Csardi <csardi.gabor@gmail.com>
@@ -14,7 +14,8 @@ Description: The Iterative Signature Algorithm (ISA) is a biclustering
   algorithms.
 Depends: methods, isa2, Biobase, AnnotationDbi, Category, genefilter, DBI
 Suggests: igraph (>= 0.5.5), Matrix, GOstats,
-	  GO.db, KEGG.db, biclust, MASS, xtable, ALL, hgu95av2.db
+	  GO.db, KEGG.db, biclust, MASS, xtable, ALL, hgu95av2.db,
+	  targetscan.Hs.eg.db, org.Hs.eg.db
 License: GPL (>= 2)
 biocViews: Classification, Visualization, Microarray, GeneExpression
 Collate: AllClasses.R AllGenerics.R ISAExpressionSet-methods.R
