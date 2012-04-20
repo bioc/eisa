@@ -36,7 +36,7 @@ exportMethods("makeValidParams", "ontology", "ontology<-", "conditional",
 exportMethods("summary", "htmlReport", "pvalues", "geneCounts",
               "oddsRatios", "expectedCounts", "universeCounts",
               "universeMappedCount", "geneMappedCount", "geneIdUniverse",
-              "condGeneIdUniverse", "geneIdsByCategory", "sigCategories")
+              "geneIdsByCategory", "sigCategories")
 
 exportMethods("coerce")
 
