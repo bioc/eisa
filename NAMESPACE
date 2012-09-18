@@ -1,3 +1,4 @@
+importFrom(BiocGenerics, annotation, "annotation<-")
 import(isa2)
 import(Category)
 import(AnnotationDbi)
