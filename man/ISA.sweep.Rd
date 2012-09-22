@@ -84,7 +84,7 @@ ISASweepGraphPlot (graph, vertex.label=V(graph)$id,
 
   \code{ISASweepGraphPlot} returns \code{NULL}, invisibly.
 }
-\author{Gabor Csardi \email{Gabor.Csardi@unil.ch}}
+\author{Gabor Csardi \email{csardi.gabor@gmail.com} }
 \references{
   Bergmann S, Ihmels J, Barkai N: Iterative signature algorithm for the
   analysis of large-scale gene expression data \emph{Phys Rev E Stat
@@ -103,7 +103,7 @@ ALL.filt <- ALL[genefilter(ALL, flist), ]
 ALL.filt2 <- ALL.filt[, grepl("^B", ALL.filt$BT)]
 
 # Run ISA
-set.seed(1)
+set.seed(2)
 modules <- ISA(ALL.filt2, flist=NA, thr.gene=seq(2,4,by=0.5), thr.cond=1)
 
 # Do the sweep
