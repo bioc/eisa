@@ -235,10 +235,9 @@ ISAHTMLModules <- function(eset, modules, which=NULL,
 
   isa2:::isa.status("Generating module pages", "in")
 
-  library(Biobase)
   library(GO.db)
   library(KEGG.db)
-  library(igraph0)
+  library(igraph)
   library(xtable)
 
   if (is.null(which)) { which <- seq_len(length(modules)) }
