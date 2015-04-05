@@ -189,7 +189,8 @@ mygenes <- c("YARS", "NFKB2", "NGFR", "CDH1", "NFAT5", "NDRG1", "GAP43",
  "MOG") 
 
 library(org.Hs.eg.db)
-myentrez <- na.omit(unlist(mget(mygenes, revmap(org.Hs.egSYMBOL))))
+myentrez <- na.omit(mapIds(org.Hs.eg.db, mygenes, 'ENTREZID', 
+keytype='SYMBOL'))
 categories <- list(myelin=myentrez)
 
 data(ALLModules)
