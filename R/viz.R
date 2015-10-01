@@ -58,7 +58,7 @@ gograph <- function(table, colbar.length=30, label.cex=1, alpha=1, abbrev=5,
   }
   vert <- unique(vert)
 
-  g <- subgraph(go.graph, vert)
+  g <- induced_subgraph(go.graph, vert)
 
   #######################
   # P values for the graph
@@ -102,7 +102,7 @@ gograph <- function(table, colbar.length=30, label.cex=1, alpha=1, abbrev=5,
   freq <- unname(table(index)[ as.character(index) ])
   V(g2)$label <- ifelse(freq > 1, paste(sep="", V(g2)$label, ",", freq), "")
   
-  l <- layout.reingold.tilford(g2, mode="all", root=r2)
+  l <- layout.reingold.tilford(g2, mode="out", root=as_ids(r2))
   l <- cbind(l[,2], l[,1])
 
   #######################
