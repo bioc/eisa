@@ -113,6 +113,7 @@ ISAHTML (eset, modules, target.dir, template = system.file("autogen",
   The vignette included in the \code{eisa} package.
 }
 \examples{
+\dontrun{
 # Load data
 library(ALL)
 data(ALL)
@@ -131,6 +132,7 @@ ISAHTML(ALL, modules=ALLModulesSmall, target.dir=htmldir,
 # Open a browser to view the summary
 if (interactive()) {
   browseURL(URLencode(paste("file://", htmldir, "/maintable.html", sep="")))
+}
 }
 }
 \keyword{cluster}
