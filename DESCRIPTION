@@ -1,5 +1,5 @@
 Package: eisa
-Version: 1.43.0
+Version: 1.43.1
 Date: 2014-03-26
 Title: Expression data analysis via the Iterative Signature Algorithm
 Author: Gabor Csardi <csardi.gabor@gmail.com>
@@ -23,3 +23,4 @@ Collate: AllClasses.R AllGenerics.R ISAExpressionSet-methods.R
 	 ISAModules-methods.R enrichment.R CHR.R GO.R KEGG.R miRNA.R 
 	 autil.R autogen.R biclust.R eisa.R viz.R zzz.R
          generalenrichment.R
+PackageStatus: Deprecated
